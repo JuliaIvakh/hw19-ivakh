@@ -57,13 +57,18 @@ console.log(arrayFill("x", 5));
 
 //Task 8
 const arr8 = [2, 2, 2, 2, 2, 1];
-let sum = 0;
-for (let i = 0; i < arr8.length; i++) {
-  sum += arr8[i];
-  if (sum > 10) {
-    console.log(i + " elements should be added");
-  }
-}
+let { result: a } = arr8.reduce(
+  (acc, item) => {
+    if (acc.sum > 10) {
+      return acc;
+    }
+    acc.sum += item;
+    acc.result += 1;
+    return acc;
+  },
+  { sum: 0, result: 0 }
+);
+console.log(a);
 
 //Task 9
 const arr9 = [1, 2, 3, 4, 5];
