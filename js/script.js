@@ -77,15 +77,17 @@ console.log(arr9);
 
 //Task 10
 const arr10 = [[1, 2, 3], [4, 5], [6]];
-let sum10 = 0;
-for (let i = 0; i < arr10.length; i++) {
-  for (let j = 0; j < arr10[i].length; j++) {
-    sum10 += arr10[j][i];
-  }
-}
-console.log(sum10);
+let a = arr10
+  .reduce((acc, item) => {
+    return acc.concat(item);
+  }, [])
+  .reduce((acc, item) => {
+    return (acc += item);
+  }, 0);
+toString();
+console.log(a);
 
-//Task 11
+// //Task 11
 const arr11 = [
   [
     [1, 2],
