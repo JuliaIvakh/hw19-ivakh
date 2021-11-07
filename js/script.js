@@ -57,7 +57,7 @@ console.log(arrayFill("x", 5));
 
 //Task 8
 const arr8 = [2, 2, 2, 2, 2, 1];
-let { result: a } = arr8.reduce(
+let { result: a8 } = arr8.reduce(
   (acc, item) => {
     if (acc.sum > 10) {
       return acc;
@@ -68,7 +68,7 @@ let { result: a } = arr8.reduce(
   },
   { sum: 0, result: 0 }
 );
-console.log(a);
+console.log(a8);
 
 //Task 9
 const arr9 = [1, 2, 3, 4, 5];
@@ -77,7 +77,7 @@ console.log(arr9);
 
 //Task 10
 const arr10 = [[1, 2, 3], [4, 5], [6]];
-let a = arr10
+let a10 = arr10
   .reduce((acc, item) => {
     return acc.concat(item);
   }, [])
@@ -85,7 +85,7 @@ let a = arr10
     return (acc += item);
   }, 0);
 toString();
-console.log(a);
+console.log(a10);
 
 // //Task 11
 const arr11 = [
